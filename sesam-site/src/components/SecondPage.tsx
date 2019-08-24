@@ -1,21 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Button } from "./Button"
-import { Image } from "../components/Image"
-import { Logo } from "./Logo"
+import { Image } from "./Image"
 
-const StyledMain = styled.main`
-  grid-area: main;
+const StyledPage = styled.div`
   color: ${props => props.theme.fontColor};
   background-color: ${props => props.theme.backgroundColor};
-  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
-const LandingContainer = styled.div`
+const SecondPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,18 +29,17 @@ const LandingContainer = styled.div`
   }
 `
 
-const ButtonContainer = styled.div`
+const ListContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40vw;
 `
 
-export const Main: React.FC = props => (
-  <StyledMain>
-    <LandingContainer>
-      <Logo />
-      <h2>Sexuellt välbefinnande</h2>
+export const SecondPage: React.FC = props => (
+  <StyledPage>
+    <SecondPageContainer>
+      <h2>Varför bör man ta kontakt?</h2>
       <p>
         Lorem ipsum dolor amet umami roof party thundercats, fingerstache chia
         next level Flannel blog cold-pressed synth.
@@ -51,13 +48,10 @@ export const Main: React.FC = props => (
         Gentrify wolf food truck palo santo typewriter yr stumptown ugh. Fanny
         pack iPhone man braid pitchfork mlkshk.
       </p>
-      <ButtonContainer>
-        <Button />
-        <Button />
-      </ButtonContainer>
-    </LandingContainer>
+      <ListContainer></ListContainer>
+    </SecondPageContainer>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-  </StyledMain>
+  </StyledPage>
 )

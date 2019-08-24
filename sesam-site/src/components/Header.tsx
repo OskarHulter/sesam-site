@@ -4,8 +4,10 @@ import { Link } from "gatsby"
 
 const StyledHeader = styled.header`
   grid-area: header;
-  background-color: ${props => props.theme.secondColor};
-  min-height: 20vh;
+  color: ${props => props.theme.fontColor};
+  background-color: ${props => props.theme.backgroundColor};
+  font-family: ${props => props.theme.primaryFont};
+  max-height: 0.5em;
 `
 
 export const Header: React.FC = props => (

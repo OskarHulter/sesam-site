@@ -3,12 +3,14 @@ import styled from "styled-components"
 
 const StyledFooter = styled.footer`
   grid-area: footer;
-  background-color: ${props => props.theme.secondColor};
-  min-height: 15vh;
+  color: ${props => props.theme.primaryColor};
+  background-color: ${props => props.theme.secondaryColor};
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const Footer: React.FC = props => (
-  <StyledFooter>
-    © {new Date().getFullYear()}, Built by Oskar Hulter
-  </StyledFooter>
+  <StyledFooter>© {new Date().getFullYear()} Birgitta Hulter</StyledFooter>
 )
