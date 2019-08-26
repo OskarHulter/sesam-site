@@ -2,14 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 import { Button } from "./Button"
-import { Image } from "../components/Image"
 import { Logo } from "./Logo"
 
 const StyledMain = styled.main`
-  grid-area: main;
   color: ${props => props.theme.fontColor};
   background-color: ${props => props.theme.backgroundColor};
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,10 +20,10 @@ const LandingContainer = styled.div`
   justify-content: center;
   align-items: center;
   max-height: 20vh;
-  width: 40vw;
+  width: 60vw;
   h2 {
     font-size: 1em;
-    margin: 0.2em 0;
+    margin: 0.1em 0;
   }
   p {
     margin: 0.5em 0;
@@ -44,20 +43,14 @@ export const Main: React.FC = props => (
       <Logo />
       <h2>Sexuellt välbefinnande</h2>
       <p>
-        Lorem ipsum dolor amet umami roof party thundercats, fingerstache chia
-        next level Flannel blog cold-pressed synth.
+        Mottagningar för råd och behandling i Stockholm, Uppsala och via
+        telefon.
       </p>
-      <p>
-        Gentrify wolf food truck palo santo typewriter yr stumptown ugh. Fanny
-        pack iPhone man braid pitchfork mlkshk.
-      </p>
+      <p>Frågor och tidsbokning via mail och telefon.</p>
       <ButtonContainer>
-        <Button />
-        <Button />
+        <Button>Mail</Button>
+        <Button>Telefon</Button>
       </ButtonContainer>
     </LandingContainer>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
   </StyledMain>
 )

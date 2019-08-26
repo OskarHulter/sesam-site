@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Image } from "./Image"
+import { Button } from "./Button"
 
 const StyledPage = styled.div`
   color: ${props => props.theme.fontColor};
@@ -12,7 +13,7 @@ const StyledPage = styled.div`
   flex-direction: column;
   align-items: center;
 `
-const SecondPageContainer = styled.div`
+const PageContainer = styled.div`
   width: 60vw;
   h2 {
     font-size: 1em;
@@ -39,30 +40,34 @@ const ListContainer = styled.div`
   }
 `
 
-export const SecondPage: React.FC = props => (
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+`
+
+export const ThirdPage: React.FC = props => (
   <StyledPage>
-    <SecondPageContainer>
-      <h2>Varför ta kontakt?</h2>
-      <p>
-        Lorem ipsum dolor amet umami roof party thundercats, fingerstache chia
-        next level Flannel blog cold-pressed synth.
-      </p>
-      <p>
-        Gentrify wolf food truck palo santo typewriter yr stumptown ugh. Fanny
-        pack iPhone man braid pitchfork mlkshk.
-      </p>
+    <PageContainer>
       <ListContainer>
-        <h3>Du får:</h3>
+        <h3>Rekommenderat upplägg:</h3>
         <ul>
-          <li>Tystnadsplikt</li>
-          <li>Anpassade tider</li>
-          <li>Auktoriserad sexolog</li>
-          <li>Privat och diskret</li>
-          <li>Tacksamma kunder</li>
-          <li>Lång erfarenhet</li>
+          <li>Tre inledande besök som utvärderas.</li>
+          <li>Vidare kontakt eller hänvisning.</li>
+          <li>Ytterligare besök planeras vid behov.</li>
+          <li>Privata försäkringar kan stödja detta upplägg.</li>
         </ul>
       </ListContainer>
-    </SecondPageContainer>
+
+      <p>Ta kontakt via mail eller telefon:</p>
+      <ButtonContainer>
+        <Button>Mail</Button>
+        <Button>Telefon</Button>
+      </ButtonContainer>
+      <h4>Övrig information</h4>
+      <p>mer info</p>
+    </PageContainer>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

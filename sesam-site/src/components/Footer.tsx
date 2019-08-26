@@ -6,6 +6,7 @@ const StyledFooter = styled.footer`
   color: ${props => props.theme.primaryColor};
   background-color: ${props => props.theme.secondaryColor};
   min-height: 5vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;

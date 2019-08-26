@@ -5,15 +5,15 @@ import { Header } from "./Header"
 import { Footer } from "./Footer"
 import { Main } from "./Main"
 import { SecondPage } from "./SecondPage"
+import { ThirdPage } from "./ThirdPage"
 
 const LayoutGrid = styled.div`
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer";
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
 `
 
 export const Layout: React.FC = props => (
@@ -21,6 +21,7 @@ export const Layout: React.FC = props => (
     <Header />
     <Main />
     <SecondPage />
+    <ThirdPage />
     <Footer />
   </LayoutGrid>
 )
