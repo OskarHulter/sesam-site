@@ -6,7 +6,7 @@
   "author": "Oskar Hulter <oskarhulter@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.13.80",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.13",
     "gatsby-plugin-manifest": "^2.2.9",
     "gatsby-plugin-offline": "^2.2.10",
